@@ -10,12 +10,6 @@ import UIKit
 
 class TopSlider: UIControl {
     
-    //    var lineWidth: CGFloat! {
-    //        set{
-    //
-    //        }
-    //    }
-    
     var backColor: UIColor! {
         set{
             self.sliderRenderer.backColor = newValue
@@ -33,7 +27,7 @@ class TopSlider: UIControl {
             return self.sliderRenderer.lineColor
         }
     }
-    //
+
     var tipImage: UIImage! {
         set{
             self.sliderRenderer.tipImage = newValue
@@ -51,7 +45,6 @@ class TopSlider: UIControl {
             return self.sliderRenderer.tipColor
         }
     }
-    
     
     var value: CGFloat! {
         set{

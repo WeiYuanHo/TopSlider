@@ -14,12 +14,6 @@ class SliderRenderer: NSObject {
         didSet{
             self.lineLayer.lineWidth = self.lineWidtht
             self.backLayer.lineWidth = self.lineWidtht
-//
-//            self.lineLayer.masksToBounds = true
-//            self.lineLayer.cornerRadius = self.lineWidtht*0.5
-//            
-//            self.backLayer.masksToBounds = true
-//            self.backLayer.cornerRadius = self.lineWidtht*0.5
             
             self.updateLineLayreShape()
             self.buildBackLayerShape()
@@ -68,10 +62,8 @@ class SliderRenderer: NSObject {
     
     var value: CGFloat = 0 {
         didSet{
-//            let bounds: CGRect = self.lineLayer.bounds
             let frame: CGRect = self.lineLayer.frame
             self.lineLayer.frame = CGRectMake(frame.origin.x, frame.origin.y, self.backLayer.frame.width*self.value, self.backLayer.frame.height)
-//            self.lineLayer.position = CGPointMake(CGRectGetWidth(self.lineLayer.bounds)/2, CGRectGetHeight(self.lineLayer.bounds)/2)
             self.circleLayer.position = CGPointMake(self.backLayer.bounds.width*self.value, self.circleLayer.position.y)
             self.updateLineLayreShape()
         }
@@ -97,24 +89,12 @@ class SliderRenderer: NSObject {
         super.init()
         self.lineLayer = CAShapeLayer()
         self.lineLayer.strokeColor = UIColor.blueColor().CGColor
-//        self.circleLayer.fillColor = UIColor.blackColor().CGColor
-//        self.lineLayer.fillColor = UIColor.orangeColor().CGColor
         
         self.circleLayer = CAShapeLayer()
         self.circleLayer.fillColor = UIColor.redColor().CGColor
         
-        
         self.backLayer = CAShapeLayer()
-//        self.backLayer.fillColor = UIColor.blueColor().CGColor
-        
         self.backLayer.strokeColor = UIColor.orangeColor().CGColor
-//        self.backLayer.lineWidth =
-//        self.backLayer.backgroundColor = UIColor.brownColor().CGColor
-        
-        
-//        self.lineLayer.lineWidth = 8
-        
-        
     }
     
     func updateLineLayreShape() {
@@ -141,22 +121,11 @@ class SliderRenderer: NSObject {
     var bounds: CGRect! {
         didSet{
             self.lineLayer.frame = CGRectMake(self.bounds.origin.x, self.bounds.height/2, 0, self.bounds.height/2)
-//            self.lineLayer.position = CGPointMake(CGRectGetWidth(self.lineLayer.bounds)/2, CGRectGetHeight(self.lineLayer.bounds)/2)
-            
             self.circleLayer.bounds = CGRectMake(self.bounds.origin.x, self.bounds.origin.y, self.bounds.size.height/2, self.bounds.size.height/2)
             self.circleLayer.position = CGPointMake(0, CGRectGetHeight(self.circleLayer.bounds)/2)
-            
-//            self.backLayer.bounds = CGRectMake(0, 0, self.bounds.width, self.bounds.height/2)
             self.backLayer.frame = CGRectMake(self.bounds.origin.x, self.bounds.height/2, self.bounds.width, self.bounds.height/2)
-//            self.backLayer.position = CGPointMake(CGRectGetWidth(self.backLayer.bounds)/2, CGRectGetHeight(self.backLayer.bounds)/2)
             
             self.circleLayer.addAnimation(self.animate(), forKey: "transform")
-            
-//            self.lineLayer.masksToBounds = true
-//            self.lineLayer.cornerRadius = self.lineLayer.frame.height*0.5
-//            
-//            self.backLayer.masksToBounds = true
-//            self.backLayer.cornerRadius = self.lineLayer.frame.height*0.5
             
             
             self.backLayer.lineWidth = self.bounds.height/2
@@ -165,7 +134,6 @@ class SliderRenderer: NSObject {
             
             
             self.buildBackLayerShape()
-//            self.updateCircleLayerShape()
             self.updateLineLayreShape()
         }
     }
