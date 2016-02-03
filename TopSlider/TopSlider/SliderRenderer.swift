@@ -59,7 +59,6 @@ class SliderRenderer: NSObject {
         }
     }
     
-    
     var value: CGFloat = 0 {
         didSet{
             let frame: CGRect = self.lineLayer.frame
@@ -68,7 +67,6 @@ class SliderRenderer: NSObject {
             self.updateLineLayreShape()
         }
     }
-    
     
     private func animate() -> CABasicAnimation {
         let rotationTransform: CATransform3D = CATransform3DMakeRotation(CGFloat(M_PI), 0, 0, 1)

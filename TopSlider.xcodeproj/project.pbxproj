@@ -12,8 +12,8 @@
 		C8312FA21C6098AF00F7E047 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8312FA01C6098AF00F7E047 /* Main.storyboard */; };
 		C8312FA41C6098AF00F7E047 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8312FA31C6098AF00F7E047 /* Assets.xcassets */; };
 		C8312FA71C6098AF00F7E047 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8312FA51C6098AF00F7E047 /* LaunchScreen.storyboard */; };
-		C8312FAF1C6098D900F7E047 /* TopSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8312FAE1C6098D900F7E047 /* TopSlider.swift */; };
-		C8312FB11C60999200F7E047 /* SliderRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8312FB01C60999200F7E047 /* SliderRenderer.swift */; };
+		C84149DF1C61E7CA00FB348D /* SliderRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84149DD1C61E7CA00FB348D /* SliderRenderer.swift */; };
+		C84149E01C61E7CA00FB348D /* TopSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84149DE1C61E7CA00FB348D /* TopSlider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,8 +24,8 @@
 		C8312FA31C6098AF00F7E047 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C8312FA61C6098AF00F7E047 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C8312FA81C6098AF00F7E047 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C8312FAE1C6098D900F7E047 /* TopSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopSlider.swift; sourceTree = "<group>"; };
-		C8312FB01C60999200F7E047 /* SliderRenderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliderRenderer.swift; sourceTree = "<group>"; };
+		C84149DD1C61E7CA00FB348D /* SliderRenderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliderRenderer.swift; sourceTree = "<group>"; };
+		C84149DE1C61E7CA00FB348D /* TopSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopSlider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,14 +58,22 @@
 		C8312F9B1C6098AF00F7E047 /* TopSlider */ = {
 			isa = PBXGroup;
 			children = (
+				C84149DC1C61E7CA00FB348D /* TopSlider */,
 				C8312F9C1C6098AF00F7E047 /* AppDelegate.swift */,
 				C8312F9E1C6098AF00F7E047 /* ViewController.swift */,
 				C8312FA01C6098AF00F7E047 /* Main.storyboard */,
 				C8312FA31C6098AF00F7E047 /* Assets.xcassets */,
 				C8312FA51C6098AF00F7E047 /* LaunchScreen.storyboard */,
 				C8312FA81C6098AF00F7E047 /* Info.plist */,
-				C8312FAE1C6098D900F7E047 /* TopSlider.swift */,
-				C8312FB01C60999200F7E047 /* SliderRenderer.swift */,
+			);
+			path = TopSlider;
+			sourceTree = "<group>";
+		};
+		C84149DC1C61E7CA00FB348D /* TopSlider */ = {
+			isa = PBXGroup;
+			children = (
+				C84149DD1C61E7CA00FB348D /* SliderRenderer.swift */,
+				C84149DE1C61E7CA00FB348D /* TopSlider.swift */,
 			);
 			path = TopSlider;
 			sourceTree = "<group>";
@@ -141,8 +149,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C8312FAF1C6098D900F7E047 /* TopSlider.swift in Sources */,
-				C8312FB11C60999200F7E047 /* SliderRenderer.swift in Sources */,
+				C84149E01C61E7CA00FB348D /* TopSlider.swift in Sources */,
+				C84149DF1C61E7CA00FB348D /* SliderRenderer.swift in Sources */,
 				C8312F9F1C6098AF00F7E047 /* ViewController.swift in Sources */,
 				C8312F9D1C6098AF00F7E047 /* AppDelegate.swift in Sources */,
 			);
@@ -292,6 +300,7 @@
 				C8312FAD1C6098AF00F7E047 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
