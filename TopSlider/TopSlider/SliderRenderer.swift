@@ -93,6 +93,8 @@ class SliderRenderer: NSObject {
         
         self.backLayer = CAShapeLayer()
         self.backLayer.strokeColor = UIColor.orangeColor().CGColor
+        
+        
     }
     
     func updateLineLayreShape() {
